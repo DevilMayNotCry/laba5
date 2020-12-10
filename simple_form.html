@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<form action="/add" method="POST">
+    <div>
+        Book name:<input type="text" name="name"><br><br>
+        Published:<input type="text" name="year"><br><br>
+        Length:<input type="text" name="length"><br><br>
+    </div>
+    <div><input type="submit" value="Save"></div>
+</form>
+</body>
+</html>
+Таким же образом создаем еще один HTML-файл simple_list.html для
+отображения содержимого базы данных. код:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+{{range .}}
+<br>
+Book name:{{.Name}}<br>
+Published: {{.Year}}<br>
+Length: {{.Length}}<br>
+<br>
+{{end}}
+</body>
+</html>
